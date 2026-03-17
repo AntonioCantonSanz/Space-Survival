@@ -42,7 +42,15 @@ Librería usada para:
 - Renderizar textos y fuentes.
 
 ### Módulos estándar adicionales
-Se han empleado módulos de Python como `random`, `os`, `math` y `struct` para generación de enemigos, gestión de rutas y síntesis de audio de respaldo.
+Se han empleado módulos de Python como `random` y `os` para generación de enemigos y gestión de rutas de recursos.
+
+### Recursos multimedia integrados
+
+El proyecto incluye recursos externos cargados desde `assets/`:
+
+- **Sonidos (5)**: `menu_music.mp3`, `game_music.mp3`, `shoot.mp3`, `win.mp3`, `lose.mp3`.
+- **Imágenes**: `menu_background.jpg`, `game_background.jpg`, `player.png`, `enemy_1.png`, `enemy_2.png`.
+- **Fuente**: `font.ttf`.
 
 ---
 
@@ -216,10 +224,9 @@ Gestiona sonido y música.
 Responsabilidades:
 
 - Inicializar mixer.
-- Reproducir efectos (`disparo`, `explosion`, `powerup`, `gameover`).
-- Mantener música de fondo.
-
-Para no depender de ficheros externos obligatorios, incluye síntesis simple de tonos como respaldo.
+- Reproducir efectos (`disparo`, `victoria`, `derrota`).
+- Gestionar música por estado (`menu` y `juego`).
+- Evitar errores si faltase algún archivo de audio.
 
 ---
 
@@ -231,9 +238,9 @@ Dificultad: normalmente Pygame requiere imágenes, audios y fuentes externas, y 
 
 Solución:
 
-- Se dibujaron sprites con primitivas de Pygame (`draw.polygon`, `draw.circle`, `draw.rect`) para evitar dependencias de imágenes.
-- Se añadió sistema de audio con tonos sintéticos de fallback.
-- Para fuentes, se intenta cargar una fuente importada desde `assets/fonts` y si no existe se utiliza una fuente del sistema.
+- Se añadieron recursos reales (imágenes y sonidos) dentro de `assets/` y se cargan por ruta.
+- Se mantiene un fallback visual por código para sprites clave si alguna imagen faltase.
+- Para fuentes, se carga `assets/fonts/font.ttf` y, si no existe, se utiliza una fuente del sistema.
 
 ### Problema 2: Movimiento consistente en distintos equipos
 
@@ -270,7 +277,7 @@ Si se dispusiera de más tiempo, se proponen las siguientes mejoras:
 3. Implementar sistema de niveles y progresión.
 4. Guardar récord de puntuación en fichero.
 5. Sustituir gráficos programáticos por sprites artísticos.
-6. Integrar música en archivos reales (`.ogg`/`.wav`) y más efectos.
+6. Ampliar la librería de efectos de sonido para eventos de impacto y recogida.
 7. Incorporar animaciones de explosión y partículas.
 8. Añadir pantalla de pausa y opciones de audio.
 9. Incluir soporte para mando.
@@ -280,7 +287,7 @@ Si se dispusiera de más tiempo, se proponen las siguientes mejoras:
 ## Estructura final del proyecto
 
 ```text
-game_project/
+Practica_3_3_Pygame/
   main.py
   juego.py
   config.py

@@ -183,7 +183,6 @@ class Juego:
                 disparo.kill()
                 if destruido:
                     self.puntuacion += impacto.get_puntos()
-                    self.audio.reproducir_explosion()
 
         # Disparos enemigos contra jugador.
         for disparo in list(self.grupo_disparos):
@@ -207,7 +206,6 @@ class Juego:
             else:
                 self.puntuacion += 80
             powerup.kill()
-            self.audio.reproducir_powerup()
 
     def _actualizar_estado_partida(self, tiempo_actual):
         if not self.jugador.esta_vivo():

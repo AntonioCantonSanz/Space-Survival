@@ -17,5 +17,5 @@ TIEMPO_LIMITE_SEGUNDOS = 120
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RUTA_ASSETS = os.path.join(BASE_DIR, "assets")
-RUTA_FUENTE_PRINCIPAL = os.path.join(RUTA_ASSETS, "fonts", "PressStart2P-Regular.ttf")
+RUTA_FUENTE_PRINCIPAL = os.path.join(RUTA_ASSETS, "fonts", "font.ttf")
 RUTA_FUENTE_PERSONALIZADA = os.path.join(RUTA_ASSETS, "fonts", "font.ttf")

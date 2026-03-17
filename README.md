@@ -23,3 +23,29 @@ python main.py
 - Disparo: Espacio
 - Reiniciar (al terminar): R
 - Salir (al terminar): ESC
+
+## Nota sobre fuentes
+
+El juego carga la fuente:
+
+- `assets/fonts/font.ttf`
+
+Si no existe, usa una fuente del sistema para que el juego siga funcionando.
+
+## Recursos incluidos
+
+### Sonidos (5)
+
+- `assets/sounds/menu_music.mp3`
+- `assets/sounds/game_music.mp3`
+- `assets/sounds/shoot.mp3`
+- `assets/sounds/win.mp3`
+- `assets/sounds/lose.mp3`
+
+### Imagenes
+
+- `assets/images/menu_background.jpg`
+- `assets/images/game_background.jpg`
+- `assets/images/player.png`
+- `assets/images/enemy_1.png`
+- `assets/images/enemy_2.png`

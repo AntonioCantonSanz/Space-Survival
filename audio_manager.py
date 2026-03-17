@@ -68,12 +68,6 @@ class AudioManager:
         if self.habilitado and self._sfx_lose:
             self._sfx_lose.play()
 
-    def reproducir_explosion(self):
-        return None
-
-    def reproducir_powerup(self):
-        return None
-
     def reproducir_gameover(self):
         self.reproducir_derrota()
 
