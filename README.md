@@ -49,3 +49,9 @@ Si no existe, usa una fuente del sistema para que el juego siga funcionando.
 - `assets/images/player.png`
 - `assets/images/enemy_1.png`
 - `assets/images/enemy_2.png`
+
+### [Enlace presentación prezi](https://prezi.com/view/oK0yy6A3Uqos8if9gds6/?referral_token=RlRxG2lnB3FN)
+
+## En colaboración de los alumnos
+- Iván Bosch
+- Antonio Cantón
